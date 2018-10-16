@@ -1,0 +1,13 @@
+Common VIM Commands
+
+i	enter input mode
+Esc	back to command mode	
+:wq	write and quit vi
+u	undo
+:q!	quit and don't save at all!
+dd	cut this line
+p 	paste previously cut line
+/text	search for "text"
+n	repeat last search
+gg	goes to top of document
+G	goes to bottom of document   

@@ -1,0 +1,22 @@
+##### IBM DB2 Common Commands ####
+
+db2start				starts database instance
+db2 list active databases		list active databases
+db2 list database directory		list databases within instance
+db2 activate database <insertDBname>	activates specific databas
+db2 list applications			shows connections to database
+db2 connect to <insertDBname>		connect to a specific database
+db2 terminate				cancel connection to database
+db2 deactivate database sample		turn database off
+db2stop					stops database instance
+db2 list node directory			list nodes of the database
+db2diag -h 				help for DB2Diag logs
+db2 "get dbm cfg" | more 		pipes out the config file, shows lots of details!
+ 
+db2 "get db cfg for <insertDBName> " | grep LOGPRIMARY - shows number of primary logs 
+db2 "update db cfg for <insertDBName> using <property> <value>" - change the value of a property in the config 
+db2 "catalog database <DBname> at node <hostname> with 'DEV DB 01'"
+db2 attach to <dbInstanceName> 		attaches to the instance so that you can show details of log
+db2 "catalog tcpip node <workingName> remote <hostname> server <port#> with 'Notes'"	add a node to a node directory
+
+ 

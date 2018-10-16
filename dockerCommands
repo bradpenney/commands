@@ -1,0 +1,52 @@
+##### DOCKER CLI COMMANDS #####
+
+docker run <dockerImage> 		runs a container of choice
+docker ps				lists all running containers
+docker ps -a				lists all docker containers (started or stopped)
+docker stop <containerName>		stops specified container
+docker rm <containerName>		removes specified container
+docker images				lists all locally available images
+docker rmi <imageName>			deletes local copy of image
+docker pull <dockerImage>		only pull an image, don't use it yet
+docker run <image> <command>		run an image, and run the specified commmand
+docker exec <container> <command>	run a command inside a running container
+docker run -d <dockerImage>		run in detached mode (runs in background)
+docker attach <containerName>		attach back to a running container
+docker run --rm <dockerImage>		creates container and removes it on close
+docker run --name <desiredName> <image>	create a container with specified name
+docker inspect <containerID>		display information about container, including IP
+docker run -p <hostPort>:<containerPort> <dockerImage>	port map the container
+docker logs <containerID>		show the docker logs for a particular container
+docker push <dockerImage>		push docker image to docker hub (requires login)
+docker build -t <newImageName> <buildPath> 	build an image, tagged (buildpath default is .)
+docker build -t <newImageName> <buildPath> --no-cache=true	build image w/o checking cache
+docker login				login to docker hub (for pushing images)
+docker run --link <containerID>		links new container to running container without ports
+
+
+##### DOCKERFILE COMMANDS #####
+
+FROM <baseImage>		Tell which base image to start from
+RUN <command>			What to do in the base image
+COPY <sourceFilePath> <destinationFilePath>	Copy a file from source to inside container	
+CMD ["<command>", "<arguments"]	Run commands in the bash shell such as echo
+
+
+##### DOCKER COMPOSE COMMANDS #####
+
+docker compose up	starts up all the containers
+docker compose ps	checks the status of the containers managed by docker compose
+docker compose logs 	colored and aggregated logs
+docker compose logs -f	outputs appended log when it grows
+docker compose logs <containerID>	logs from a specific container
+docker compose stop	stops all running containers
+docker compose rm 	removes all the containers
+docker compose build	(re)builds the images
+
+
+##### DOCKER NETWORK COMMANDS #####
+
+docker network create --driver bridge <networkName>	create a new bridged network
+docker network connect bridge <containerName>		allow communication between networks
+docker run --net host <dockerImage>			creae a container on the host network
+

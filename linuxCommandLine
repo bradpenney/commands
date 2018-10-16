@@ -1,0 +1,10 @@
+##### Linux CLI Commands #####
+
+whoami		your current login name
+hostname	which computer you're working on
+date 		set the date and time
+uname		more information about your system
+passwd		change passwords
+touch 		create empty files
+last		list of users recently logged in
+

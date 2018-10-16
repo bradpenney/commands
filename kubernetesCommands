@@ -1,0 +1,24 @@
+##### Kubernetes Commands #####
+kubectl run 			will start running 1 or more instances of a container image on your cluster
+kubectl expose			load balance traffic across the running instancesand can create a HA proxy for accessing the containers from outside the cluster
+kubectl get pods		shows the pods that are currently running
+kubectl get pods -l <label> 	shows the pods running that match the label
+kubectl get svc			show currently running services
+kubectl scale deployments <name> --replicas=4	increase/decrease the number of deployments
+kubectl edit deployments <name>	edit the running configuration (the manifest of the live deployment)
+kubectl get rs 			show the replica sets that are running
+kubectl	get rs -l <label>	show the replica sets that match the label name
+kubectl rollout history deployments <label>	show rollout history of a deployments
+kubectl rollout undo deployments game --to-revision 1 	rollback to previous version of rollout
+kubectl get deployments		show the current deployments
+kubectl describe pod <podName>	show config file of pod
+kubectl get pv			get persistent volume
+kubectl get pvc			persistent volume claim
+kubectl create configmap index --from-file <file>	create and index from <file>
+kubectl get crd			get custom resource definition
+
+
+##### Minikube Commands #####
+minikube start			starts instance of minikube
+minikube ssh			ssh directly into the instance of minikube
+

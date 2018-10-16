@@ -1,0 +1,30 @@
+##### GIT COMMANDWS #####
+
+git config --global user.name "Brad Penney"		sets the global user name
+git config --global user.email "penney.brad@gmail.com" 	sets the global user email addres
+git config --global --list				view the global list settings
+git init						initialize git repository in current directory
+git clone <url of repository>				clone a respository from GitHub
+git status						check to see the status of each file in the directory
+git status -s						shorten the output of git statust 
+git add <argument>					add a file to the git system (. for all files)
+git commit -m "Insert Message Here"			commit files to git system
+git rm --cached <filename>				remove file from staging area
+git log							project history is displayed
+git log --oneline					display the log with minimal details (faster)
+git log <sinceID> .. <untilID>				shows filtered commit history
+git branch						list the branches
+git branch <newBranch>					create a new branch with <name>
+git checkout <branchName>				switches active branchg to <branchName>
+git commit -am "Message"				express commit, don't need to add it to staging first
+git checkout <commitID>					checkout commit version in read-only mode
+git checkout -b <newBranchName>				create a new branch from a read-only commit
+git checkout master					return to the master branch
+git chekcout <commitID> <fileName>			checkout just one particular file from a previous commit
+git revert HEAD						revert to previous commit
+git reset						unstage all changes, permanent loss of changes
+git reset <fileName>					permanent unstaging of file, used for local changes
+git reset --hard					permanent unstaging of all changes, changes deleted
+git reset						unstaging of all changes, changes remain and can be restaged
+
+
