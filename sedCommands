@@ -3,6 +3,7 @@
 sed -e	Editing instruction follows
 sed -f	Filename or script follows
 sed -n 	Supress automatic output of input lines
+sed -i	Interactive mode - apply the changes to the file, not just output to screen
 
 ##### Substitution Flags #####
 
@@ -22,4 +23,7 @@ Print only records with matching pattern:
 	sed -nr '/<regex>/p' 
 
 Print records with one of these matching patterns:
-	sed -nr '/<regex1>|<regex2>/p' 
+	sed -nr '/<regex1>|<regex2>/p'
+
+Print specific line in a file:
+	sed -n '3'p <filename> 

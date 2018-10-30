@@ -1,0 +1,10 @@
+##### Basic grep Usage #####
+
+ps aux | grep <searchTerm>			show all processes that contain the searchTerm
+grep <searchTerm> <filename>			show all lines of a file that contain searchTerm
+grep '^#' <filename>				search for comments in a file
+grep -v '^#' <filename>				search for everything that isn't a comment in file
+grep <searchTerm> <filename> -B 5		returns every match and 5 lines before it
+grep <searchTerm> <filename> -A 5		returns every match and 5 lines after it
+grep -e <searchTerm> -e <searcTerm> <filename>	search for multiple search terms
+

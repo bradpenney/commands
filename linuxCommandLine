@@ -1,10 +1,20 @@
 ##### Linux CLI Commands #####
 
-whoami		your current login name
-hostname	which computer you're working on
-date 		set the date and time
-uname		more information about your system
-passwd		change passwords
-touch 		create empty files
-last		list of users recently logged in
+whoami				your current login name
+hostname			which computer you're working on
+date 				set the date and time
+uname				more information about your system
+passwd				change passwords
+touch 				create empty files
+last				list of users recently logged in
+cat <filename>			output contents of a file
+tac <filename>			output contents of a file in reverse order
+cut -d : -f 1 <filename>	show the contents of a file, only the field specified by delimiteri
+sort				sort output in alphabetic order, usually receives info from pipe
+sort -n				numeric sort, usually receives info from pipe
+head -n <#> <filename>		show first <#> of lines in <filename>
+tail -n <#> <filename>		show last <#> of lines in <filename>
+tail -f <filename>		show last lines of file, continually updated (useful for logs)
+cat <filename> | less		show contents of a file, page by page, and scrollable
+cat <filename> | tr [a-z] [A-Z]	translate characters in a file to uppercase (or lowercase)
 
