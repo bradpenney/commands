@@ -26,4 +26,4 @@ grep -R '^...$' /* 2> /dev/null | head -n 5
 
 # Use grep to find all files that contain "alex" but not "alexander"
 echo -e "\nThe files that contain 'alex' but not 'alexander' (using grep, errors purged, first 5 lines):"
-grep -R 'alex '
+grep -R 'alex ' /

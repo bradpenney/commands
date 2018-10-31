@@ -17,4 +17,10 @@ tail -n <#> <filename>		show last <#> of lines in <filename>
 tail -f <filename>		show last lines of file, continually updated (useful for logs)
 cat <filename> | less		show contents of a file, page by page, and scrollable
 cat <filename> | tr [a-z] [A-Z]	translate characters in a file to uppercase (or lowercase)
+chvt [1-6]			change virtual terminal to tty#
+su - <username>			switch user (blank for root), change env vari
+su <username>			swich user (blank for root), keep env vari
+visudo				edit the sudo file
+ssh keygen			generate public/private rsa key pair
+ssh-copy-id <target>		add ssh key to destination machine
 

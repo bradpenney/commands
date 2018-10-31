@@ -1,0 +1,28 @@
+##### Linux User & Group Management ######
+
+useradd <username>			Add a new user (no flags)
+useradd -s /sbin/nologin <username>	Add a new user who cannot directly login to system
+userdel	-fd <username>			Force delete user, including home dir and mail spool
+usermod --help				Manage various components of users
+
+groupadd <groupname>			Add a new group
+groupadd -g <gid> <groupname>		Add a new group name with a specific id
+groupmod --help				Help menu to modify users
+
+id <username>				See properties about the user, including groups
+
+passwd --help				See things that the passwd utility can do
+passwd -f				Force operation
+passwd -S <username>			Show properties about the password
+
+chage <username>			Change many password properties, best as root
+
+vim /etc/group				Edit group memebers
+vigr					Specific editor to manage group members
+
+/etc/default/useradd			Default configuration for users
+/etc/login.defs				More user defaults (higher priority), change to apply to new
+/etc/skel/				Base directory template for new user accounts
+/etc/passwd				Main config file for users
+/etc/shadow				Password management (encrypted passwords stored here)
+/etc/group				Group management
