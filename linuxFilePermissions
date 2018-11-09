@@ -1,0 +1,51 @@
+##### Linux File Permissions #####
+
+chmod <permissions> <filename>
+	- 4 = read
+	- 2 = write
+	- 1 = execute
+	- first digit is user, second is group, third is others
+
+Examples:
+chmod 777 <filename>	Set open permissions for everyone
+chmod 764 <filename>	Owner full permissions, group read/write, others read
+chmod 753 <filename>	Owner full, group read/execute, others write/execute
+
+chown <owner (group/user)> <file/directory>
+Example:
+	sudo chown brad /home/jim - would make brad the owner of the jim directory
+
+chown -R		Recursively change owner
+
+chgrp <newOwner> <group>Change the group
+
+umask	the permissions that are removed from files/directories as they are created
+	edit umask by going to /etc/profile
+	edit umask for user by going to .bash_profile, add line
+		umask 024 (or whatever)
+
+chmod g+w <directory>	Allow group members to write to a directory
+
+##### Special Permissions #####
+
+4 - SUID - run as owner
+2 - SGID - run as group owner
+1 - sticky - only deletable if owner of file or owner of directory
+
+To set SUID
+	chmod u+s <filename>	enable SUID, will run as owner
+
+To set SGID
+	chmod g+s <directory>	enable SGID, will run as group
+
+To set StickyBit
+	chmod +t <directory>	enable stickybit, only deletable by owner of file or dir
+
+##### Access Control Lists #####
+
+setfacl -R -m g:<group>:rx <directory>	Allows group read/write on a directory (currently existing)
+setfacl -m d:g:<group>:rx <directory>	Grants group read/write on future creations in directory
+getfacl <directory>			Show ACL for directory
+setfacl -m u:<user>:r <file>		Set ACL on specific file for a specific user
+setfacl -m d:0::- <directory>		Do not allow others to have any permissions on a directory
+

@@ -1,8 +1,9 @@
 ##### Regular Expressions Metacharacters #####
 
 .	Match any single chracter except newline.
-*	Match any number of single character that preceeds it
+*	Match any number of single character that preceeds it (including zero)
 [...]	Match any one of the characters enclosed
+{...}	Explicit quanity of the preceding character
 ^	First character of a regex, matches beginning of line (or string in awk)
 $	Last character of a regex, matches the end of the line (or string in awk)
 \	Escape the special character that follows
@@ -13,7 +14,7 @@ $	Last character of a regex, matches the end of the line (or string in awk)
 +	Matches one or more occurrences of the preceeding regex
 ?	Matches zero or one occurrences of the preceeding regex
 |	Specifies that either the preceeding or following regex can be matched
-()	Groups regexs
+()	Group of characters
 
 
 ##### Character Classes Special Characters [] #####

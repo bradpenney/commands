@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Author: Brad Penney, inspired by Sander van Vugt
+# Purpose: Learn to manipulate text files
+# Date: October 30th, 2018
+
+# Use head and tail to display the 5th line of the file /etc/passwd
+echo -e "\n5th line of /etc/passwd (using head & tail):"
+head -n 5 /etc/passwd | tail -n 1
+
+# Use sed to display the 5th line of the file /etc/passwd
+echo -e "\n5th line of /etc/passwd (using sed):"
+sed -n 5p /etc/passwd
+
+# Use awk to display only the first column of the results of ps aux
+echo -e "\nThe first column of the first five lines of ps aux (using awk & head)"
+ps aux | awk '{ print $1 }' | head -5
+
+# Use grep to show the name of all the files in /etc that have lines that start with root
+echo -e "\nThe name of all the files that have lines that start with 'root' in /etc/ (using grep, errors purged):"
+grep -l '^root' /etc/* 2> /dev/null
+
+# Use grep to show all lines from all files that contain exactly 3 characters
+echo -e "\nThe files with lines that only have 3 characters include (using grep, errors purged, first 5 lines):"
+grep -R '^...$' /* 2> /dev/null | head -n 5
+
+# Use grep to find all files that contain "alex" but not "alexander"
+echo -e "\nThe files that contain 'alex' but not 'alexander' (using grep, errors purged, first 5 lines):"
+grep -R 'alex ' /
