@@ -1,0 +1,9 @@
+##### Django Commands #####
+
+django-admin startproject <projectName>	Start new Django project
+python manage.py runserver		Start the Development Server
+python manage.py migrate		Migrate all existing changes 
+pip install mysqlclient			Install mysql database instead of sqlite3
+	Note: If fails, check https://stackoverflow.com/questions/35190465/virtualenvpython3-4-pip-install-mysqlclient-error
+
+    

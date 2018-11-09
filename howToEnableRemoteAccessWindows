@@ -1,0 +1,31 @@
+##### How to Enable Remote Access in Windows #####
+
+1.) Go to Control Panel -> System
+	- Remote Settings
+		- Allow remote connections
+
+2.) Go to Control Panel -> Windows Firewall
+	- Allow a Program or feature through Windows Firewall
+	- Find & click "Remote Desktop" - ensure home & public enabled
+
+3.)  Go to Control Panel -> Network & Sharing Center
+	- Click on "Change Adapter Settings"
+	- Right-click Local Area Connection, select Status -> Details
+	- Record the IPv4 Default Gateway & IPv4 DNS Servers (2)
+	- Close Panel
+	- Click "Properties" -> IPv4 -> Properties
+	- Set a Static IP for this computer
+		- This will change accoding to setup
+		- Add in the default gateway & DNS servers recorded earlier
+
+4.) Log into the Router
+	- Find the Forwarding Section
+	- Call the new Port Forward "RDP", with selected port (ie. 4456)
+		- The Windows computer will be listening on 3389
+		- Put in the assigned static IP address
+
+5.) Make sure you know the external ip address as this is the only way to log in
+
+6.) Start your RDP connection software & enter the necessary credentials
+	- Must login with an existing user on the windows computer
+
