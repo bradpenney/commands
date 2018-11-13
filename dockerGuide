@@ -1,0 +1,56 @@
+##### Docker on Linux Comand Line #####
+
+This is an introduction to start working with Docker in the command line in Linux.  This isn't a guide to the theory of how Docker works, but rather a screenshot guide through some of the basic commands.
+
+### Heading: Docker Container Management Basics ######
+
+To start a new Docker container that is based on the latest Ubuntu image, run docker run -ti ubuntu:
+
+## Insert dockerRunUbuntu ##
+
+Don't forget to add the -ti flag to the command, as this gives you an interactive terminal to work with.  Otherwise, the container will run and immediately exit itself (as it has nothing to do!)
+
+To list all of the running containers on the system, the command is docker ps:
+
+## insert dockerPS ##
+
+To list all of the containers on the system, whether running or not, the command is docker ps -a:
+
+##  Insert dockerPSA ##
+
+To stop a Docker container, the command is docker stop <containerName>.  See below:
+
+## insert dockerStop ##
+
+Note that names for Docker containers are automatically generateed (unless specified by the --name tag during their creation), and can be referenced to stop / destroy them.  It is also possible to use the Container ID number instead of the name.
+
+Stopped containers can be restarted using docker start <containerName>:
+
+## insert dockerStart ##
+
+To remove a container completely (cannot be restarted, its simply gone), the command is docker rm <containerName>:
+
+## insert dockerRM ##
+
+Each container will have a ton of container-specific parameters about itself.  To list these (the output is large!), run docker inspect <containerName>.  Below is a screenshot of the partial output:
+
+## insert dockerInspect ##
+
+There are plenty of flags that can be used with the docker run command.  These can be combined together, making the run statement very large in some higly customized cases.  Some examples include:
+
+docker run -p <hostPort>:<containerPort> - port map the container
+docker run -d - run in detached mode (makes the container persistent)
+docker run --name <preferredName> - allows the user to specify the name of a container
+docker run --rm - makes the container remove itself as soon as it exits
+
+##### Heading - Docker Image Management Basics #####
+
+To determine what Docker images are existing on your system, the command is docker images:
+
+## Insert dockerImages ##
+
+To delete an image, the command is docker rmi <imageName>.  For example, below we're removing the latest Ubuntu image:
+
+## Insert dockerImageRemoval ##
+
+In order to start a new Docker container that is based on the latest Ubuntu image, run docker run ubuntu
