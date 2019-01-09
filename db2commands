@@ -19,4 +19,16 @@ db2 "catalog database <DBname> at node <hostname> with 'DEV DB 01'"
 db2 attach to <dbInstanceName> 		attaches to the instance so that you can show details of log
 db2 "catalog tcpip node <workingName> remote <hostname> server <port#> with 'Notes'"	add a node to a node directory
 
+##### DB2 9.5 Commands #####
+
+export DB2INSTANCE=<instanceName> --sets the default instance environment variable
+db2 get instance -- find out what instance you're currently working in
+db2ilist -- list all available instances in your system
+db2set -all -- view current DB2 registry values
  
+##### CLP Interactive Mode ####
+db2 -- enter interactive mode
+h -- shows the command history
+r <n> -- reexecute the command in history
+e <n> -- edit the command (in vi)
+!<osCommand> -- operating system commands
